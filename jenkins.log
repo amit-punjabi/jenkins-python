@@ -1,0 +1,42 @@
+Started by user Amit Punjabi
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] node
+Running on Jenkins in /Users/amitpunjabi/.jenkins/workspace/PythonTest
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Cloning Git)
+[Pipeline] git
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/amit-punjabi/jenkins-python.git # timeout=10
+Fetching upstream changes from https://github.com/amit-punjabi/jenkins-python.git
+ > git --version # timeout=10
+ > git fetch --tags --progress https://github.com/amit-punjabi/jenkins-python.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision d38402434c35be6968d0e96a7a57168ae8682aaa (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f d38402434c35be6968d0e96a7a57168ae8682aaa
+ > git branch -a -v --no-abbrev # timeout=10
+ > git branch -D master # timeout=10
+ > git checkout -b master d38402434c35be6968d0e96a7a57168ae8682aaa
+Commit message: "Test File"
+First time build. Skipping changelog.
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Test)
+[Pipeline] echo
+Staring Sample Test
+[Pipeline] sh
++ python test.py
+amitpunjabi2
+ACCESS_KEY
+amitpunjabi2
+amitpunjabi2
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
